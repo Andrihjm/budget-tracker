@@ -25,6 +25,7 @@ async function page() {
         <h1 className="text-center text-3xl">
           Welcome, <span className="ml-2 font-bold">{user.firstName}! 👋</span>
         </h1>
+
         <h2 className="mt-4 text-center text-base text-muted-foreground">
           Let &apos;s get started by setting up your currency
         </h2>
@@ -33,7 +34,9 @@ async function page() {
           You can change these settings at any time
         </h3>
       </div>
+
       <Separator />
+
       <Card className="w-full">
         <CardHeader>
           <CardTitle>Currency</CardTitle>
@@ -45,10 +48,13 @@ async function page() {
           <CurrencyComboBox />
         </CardContent>
       </Card>
+
       <Separator />
+
       <Button className="w-full" asChild>
         <Link href={"/"}>I&apos;m done! Take me to the dashboard</Link>
       </Button>
+
       <div className="mt-8">
         <Logo />
       </div>
