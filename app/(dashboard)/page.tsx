@@ -5,6 +5,7 @@ import { redirect } from "next/navigation";
 import React from "react";
 import CreateTransactionDialog from "./_componenets/CreateTransactionDialog";
 import Overview from "./_componenets/Overview";
+import History from "./_componenets/History";
 
 const page = async () => {
   const user = await currentUser();
@@ -53,7 +54,10 @@ const page = async () => {
         </div>
       </div>
 
-      <Overview userSettings={userSettings} />
+      <div>
+        <Overview userSettings={userSettings} />
+        <History userSettings={userSettings} />
+      </div>
     </div>
   );
 };
