@@ -13,12 +13,12 @@ import { TransactionType } from "@/lib/types";
 import { useQuery } from "@tanstack/react-query";
 import { PlusSquare, TrashIcon, TrendingDown, TrendingUp } from "lucide-react";
 import React from "react";
-import CreateCategoryDialog from "../(dashboard)/_componenets/CreateCategoryDialog";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { cn } from "@/lib/utils";
 import { Category } from "@prisma/client";
-import DeleteCategoryDialog from "../(dashboard)/_componenets/DeleteCategoryDialog";
+import CreateCategoryDialog from "../_componenets/CreateCategoryDialog";
+import DeleteCategoryDialog from "../_componenets/DeleteCategoryDialog";
 
 function page() {
   return (
