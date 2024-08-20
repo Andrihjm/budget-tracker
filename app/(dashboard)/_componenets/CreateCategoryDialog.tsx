@@ -49,7 +49,7 @@ interface Props {
   trigger: ReactNode;
 }
 
-const CreateCategoryDialog = ({ type, successCallBack, trigger }: Props) => {
+export const CreateCategoryDialog = ({ type, successCallBack, trigger }: Props) => {
   const [isOpen, setisOpen] = useState(false);
   const form = useForm<CreateCategorySchemaType>({
     resolver: zodResolver(CreateCategorySchema),

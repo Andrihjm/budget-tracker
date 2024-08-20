@@ -326,7 +326,7 @@ export function RowActions({
       <DeleteTransactionDialog
         open={isShowDeleteDialog}
         setOpen={setIsShowDeleteDialog}
-        transaction={transaction.id}
+        transactionId={transaction.id}
       />
 
       <DropdownMenu>

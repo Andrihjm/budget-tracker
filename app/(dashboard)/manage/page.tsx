@@ -20,7 +20,7 @@ import { Category } from "@prisma/client";
 import CreateCategoryDialog from "../_componenets/CreateCategoryDialog";
 import DeleteCategoryDialog from "../_componenets/DeleteCategoryDialog";
 
-function page() {
+const page = () => {
   return (
     <>
       {/* ---------- HEADER ---------- */}
@@ -53,11 +53,11 @@ function page() {
       </div>
     </>
   );
-}
+};
 
 export default page;
 
-function CategoryList({ type }: { type: TransactionType }) {
+const CategoryList = ({ type }: { type: TransactionType }) => {
   const categoriesQuery = useQuery({
     queryKey: ["categories", type],
     queryFn: () =>
@@ -130,9 +130,10 @@ function CategoryList({ type }: { type: TransactionType }) {
       </Card>
     </SkeletonWrapper>
   );
-}
+};
 
-export function CategoryCard({ category }: { category: Category }) {
+// export function CategoryCard({ category }: { category: Category }) {
+const CategoryCard = ({ category }: { category: Category }) => {
   return (
     <div className="flex flex-col justify-between border border-separate shadow-md rounded-md shadow-black/[0.1] dark:shadow-white/[0.1]">
       <div className="flex flex-col items-center gap-2 p-4">
@@ -156,4 +157,4 @@ export function CategoryCard({ category }: { category: Category }) {
       />
     </div>
   );
-}
+};

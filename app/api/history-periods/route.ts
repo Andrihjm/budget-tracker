@@ -16,7 +16,7 @@ export type GetHistoryPediodsResponseType = Awaited<
   ReturnType<typeof getHistoryPediods>
 >;
 
-export async function getHistoryPediods(userId: string) {
+const getHistoryPediods = async (userId: string) => {
   const result = await prisma.monthHistory.findMany({
     where: {
       userId,
@@ -39,4 +39,4 @@ export async function getHistoryPediods(userId: string) {
   }
 
   return years;
-}
+};

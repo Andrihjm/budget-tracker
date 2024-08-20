@@ -81,6 +81,7 @@ const CategoryPicker = ({ type, onChange }: Props) => {
         >
           <CommandInput placeholder="Search category..." />
           <CreateCategoryDialog
+            trigger={<CommandItem disabled>Create Category</CommandItem>}
             type={type}
             successCallBack={onSuccessCallBack}
           />
